@@ -1,0 +1,24 @@
+<div class="conten my-[20px]">
+    <h1 class="font-bold text-[20px] py-[20px]">Sản phẩm</h1>
+    <div class="product grid grid-cols-4 gap-5 ">
+        <form action="" *ngFor="let product of products">
+            <div class=" khoiy border-solid border-2 border-[#f3f3f3] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition duration-500 cursor-pointer ">
+                <div class=" w-[100%] ">
+                    <a routerLink="/product/{{product._id}}"> <img src={{product.img}} alt=""></a>
+                </div>
+                <div class="py-[10px] px-[10px] leading-8">
+                    <a routerLink="/product/{{product._id}}">
+                        <h4 class="font-bold hover:underline">{{product.name}}</h4>
+                    </a>
+                    <p class="text-[15px] text-[red]">{{product.price}}</p>
+                    <p>10 lượt xem</p>
+                </div>
+                <div class="conten-item ">
+                    <button id="btnAddToCart">Add to cart</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,18 @@
+<div class="flex h-screen bg-gray-50 dark:bg-gray-900">
+    <aside class="z-20 flex-shrink-0 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block">
+        <app-navadmin></app-navadmin>
+    </aside>
+
+
+    <div class="flex flex-col flex-1 w-full">
+        <app-headeradmin></app-headeradmin>
+
+        <main class="h-full overflow-y-auto">
+            <div class="container px-6 mx-auto grid">
+                <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
+                    <router-outlet></router-outlet>
+                </h2>
+            </div>
+        </main>
+    </div>
+</div>

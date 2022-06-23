@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.carousel {
+    background: rgb(255, 255, 255);
+}
+
+.carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+
+/* cell number */
+
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+}
+
+.khoiy {
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.conten-item {
+    position: absolute;
+    bottom: 0;
+    background-color: #fff;
+    width: 100%;
+    transform: translateY(120px);
+    transition: ease-in-out 1s;
+    animation-name: fadeOut;
+    animation-duration: 1s;
+}
+
+.khoiy:hover .conten-item {
+    transform: translateY(0);
+    transition: ease-in-out 1s;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.conten-item {
+    text-align: center;
+}
+
+.conten-item button {
+    background-color: rgb(247, 0, 0);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+
+.bg-lighttt{
+    background-color: rgb(30, 128, 30);
+    color : white;
+}
+.carousel-item{
+    margin : -69px 200px;
+}
+.bg-primaryy{
+    height: 73px;
+    background-color: rgb(30, 128, 30);
+}
+.shadow{
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.position-relative{
+    margin:-23px 43px;
+}
+.max-w-2xl {
+    max-width: 66rem;
+}

@@ -1,0 +1,21 @@
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['required']" class="text-danger">
+  {{key}} bắt buộc nhập.
+</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['min']" class="text-danger">
+  {{key}} tối thiểu là 1.
+</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['max']" class="text-danger">
+  {{key}} tối đa là 100.
+</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']" class="text-danger">
+  {{key}} tối thiểu {{field.errors?.['minlength'].requiredLength}} ký tự.
+</span>
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']" class="text-danger">
+  {{key}} tối đa {{field.errors?.['maxlength'].requiredLength}} ký tự.
+</span>
+
+
+<!-- Custom validate -->
+<span *ngIf="(field.dirty || field.touched) && field.errors?.['hasProductError']" class="text-danger">
+  {{key}} phải chứa từ 'product'.
+</span>
